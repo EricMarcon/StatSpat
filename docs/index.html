@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html  lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Statistiques Spatiales</title>
+  <meta name="description" content="Modèle de livre écrit avec bookdown.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Statistiques Spatiales" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Modèle de livre écrit avec bookdown." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistiques Spatiales" />
+  
+  <meta name="twitter:description" content="Modèle de livre écrit avec bookdown." />
+  
+
+<meta name="author" content="Eric Marcon">
+
+
+<meta name="date" content="2017-12-21">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="Processus.html">
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Ouvrage Bookdown</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="Processus.html"><a href="Processus.html"><i class="fa fa-check"></i><b>1</b> Processus classiques</a><ul>
+<li class="chapter" data-level="1.1" data-path="Processus.html"><a href="Processus.html#definitions"><i class="fa fa-check"></i><b>1.1</b> Définitions</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="Processus.html"><a href="Processus.html#processus-ponctuel"><i class="fa fa-check"></i><b>1.1.1</b> Processus ponctuel</a></li>
+<li class="chapter" data-level="1.1.2" data-path="Processus.html"><a href="Processus.html#propriete-de-premier-ordre"><i class="fa fa-check"></i><b>1.1.2</b> Propriété de premier ordre</a></li>
+<li class="chapter" data-level="1.1.3" data-path="Processus.html"><a href="Processus.html#propriete-de-second-ordre"><i class="fa fa-check"></i><b>1.1.3</b> Propriété de second ordre</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="Processus.html"><a href="Processus.html#definition-locale"><i class="fa fa-check"></i><b>1.2</b> Définition locale</a></li>
+<li class="chapter" data-level="1.3" data-path="Processus.html"><a href="Processus.html#processus-de-poisson-homogene"><i class="fa fa-check"></i><b>1.3</b> Processus de Poisson homogène</a></li>
+<li class="chapter" data-level="1.4" data-path="Processus.html"><a href="Processus.html#propriete-de-premier-ordre-1"><i class="fa fa-check"></i><b>1.4</b> Propriété de premier ordre</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/EcoFoG/EcofoG" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistiques Spatiales</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Statistiques Spatiales</h1>
+<h4 class="author"><em>Eric Marcon</em></h4>
+<h4 class="date"><em>2017-12-21</em></h4>
+<div class="abstract">
+<p class="abstract">Abstract</p>
+<p>English abstract, on the last page.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
+<p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+</div>
+</div>
+<div id="introduction" class="section level1 unnumbered">
+<h1>Introduction</h1>
+<p>Pourquoi étudier les structures spatiales ?</p>
+<p>L’analyse des structures spatiales peut être considérée tout d’abord comme un outil statistique élémentaire. Quand on observe une carte sur laquelle sont placés des objets, ils ne semblent en général pas répartis au hasard. On peut voir des variations de densité, sous la forme de gradients ou d’agrégats. Pour décrire un phénomène quantitatif à partir d’un certain nombre d’observations, disons le diamètre moyen des arbres d’un peuplement, on utilise classiquement l’outil fourni par la théorie des variables aléatoires : on mesure un certain nombre d’arbres, on considère que leur diamètre moyen est un estimateur de l’espérance de la variable aléatoire qu’est le diamètre de chaque arbre, et on calcule la variance de l’échantillon pour avoir une idée de la variabilité des diamètres. Si on s’intéresse maintenant à la répartition spatiale de ces arbres, la quantité d’information disponible est bien plus importante : la densité des arbres, leur diamètre moyen selon le lieu et les interactions éventuelles des arbres entre eux. Les outils mathématiques nécessaires sont les processus ponctuels, généralisation spatialisée (généralement à deux dimensions) des variables aléatoires.</p>
+<p>La question fondamentale consiste à caractériser clairement ce qu’on observe. Prenons l’exemple d’un peuplement forestier dans lequel les arbres d’une espèce sont apparemment regroupés et forment des agrégats. Deux causes peuvent en être responsables : l’hétérogénéité du milieu favorise la présence de cette espèce localement, la densité des arbres est alors variable, ou bien les arbres sont regroupés par des processus d’agrégation (par exemple une faible dispersion des graines) indépendamment du milieu qu’on supposera dans ce cas homogène. Les mécanismes écologiques sont extrêmement différents dans les deux cas. Mais la distinction entre hétérogénéité et agrégation est formellement impossible sur un jeu de données unique : des hypothèses de travail sont indispensables. Cette difficulté est probablement la raison pour laquelle de nombreuses méthodes statistiques ont été mises en place pour détecter les structures spatiales. Une revue complète en sera faite (chapitre TODO), la famille d’outils la plus efficace sera étudiée en détail (chapitre TODO) ainsi que ses fondements mathématiques (les processus ponctuels, chapitre ) et de nouveaux outils seront proposés pour repousser les limites actuelles. La relation directe entre les processus ponctuels et les phénomènes écologiques sous-jacents est difficile, à cause de la simplification excessive mais surtout parce que la réalisation d’un processus observée sous la forme d’un semis de points est instantanée et unique alors qu’un peuplement forestier est le résultat d’une histoire et de processus successifs.</p>
+<p>La théorie des processus ponctuels est indispensable pour comprendre les méthodes présentées ici. Une présentation en est faite dans premier chapitre. Le deuxième chapitre présente l’état de l’art en termes d’analyse spatiale des processus ponctuels suivi de l’introduction de nouveaux outils permettant d’étendre son champ d’application. L’objectif est de permettre la caractérisation des structures spatiales dans un cadre théorique aussi vaste que possible et répondant aux exigences des données réelles, comme la prise en compte de l’hétérogénéité.</p>
+<!-- La commande \mainmatter marque le début du corps du document LaTeX-->
+<!-- Elle ne doit pas être supprimée-->
+
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="Processus.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["MyBook.pdf", "MyBook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

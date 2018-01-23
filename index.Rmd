@@ -1,0 +1,117 @@
+--- 
+title: "Statistiques Spatiales"
+author: "Eric Marcon"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+description: "Modèle de livre écrit avec bookdown."
+maintitlepage:
+  epigraph: |
+    Ce document est réalisé de façon dynamique et reproductible grâce à:
+
+    \begin{itemize}
+      \item \LaTeX, dans sa distribution Miktex (\url{http://miktex.org/}) et la classe memoir (\url{http://www.ctan.org/pkg/memoir}).
+      \item R (\url{http://www.r-project.org/}) et RStudio (\url{http://www.rstudio.com/})
+      \item bookdown. (\url{http://bookdown.org/})
+    \end{itemize}
+documentclass: memoir
+classoption:
+  - extrafontsizes
+  - onecolumn
+  - openright
+papersize: A4
+fontsize: 11pt
+verbatim-in-note: yes
+toc-depth: 3
+lang: fr
+otherlangs: [en-US, en-GB, fr]
+bibliography: [../Library.bib, packages.bib]
+biblio-style: authoryear-ibid
+cite-style: verbose-inote
+biblatexoptions:
+  - backend=bibtex
+  - citestyle=verbose-inote
+  - pageref=true
+  - isbn=false
+  - backref=true
+  - giveninits=true
+  - uniquename=init
+  - maxcitenames=2
+  - maxbibnames=150
+  - sorting=nyt
+  - sortcites=false
+link-citations: yes
+colorlinks: yes
+graphics: yes
+fig_crop: yes
+resume: |
+  Résumé en Français, en quatrième de couverture.
+  
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+  
+  Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+mots-cles:
+  - Mot clé en Français
+  - En liste
+abstract: |
+  English abstract, on the last page.
+  
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+  
+  Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+keywords:
+  - Keyword in English
+  - As a list
+fourthpagefontsize: normalsize
+---
+
+<!-- knitr and R options (packages, ...) --> 
+```{r Options, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(cache=TRUE, warning=FALSE, fig.env='SCfigure', out.width='80%', fig.asp=.75, fig.align='center')
+# Installation of packages if necessary and loading
+Library <- function(Packages) {
+  InstallAndLoad <- function(Package) {
+    if (!Package %in% installed.packages()[, 1]) {install.packages(Package)}
+    require(Package, character.only = TRUE)
+  }
+  invisible(sapply(Packages, InstallAndLoad))
+}
+# Add necessary packages here
+Packages <- c("bookdown", "knitr", "rmarkdown", "spatstat")
+
+# Install them and create packages.bib file to reference them as @R-package
+Library(Packages)
+knitr::write_bib(Packages, file="packages.bib")
+```
+
+
+# Introduction {-}
+
+Pourquoi étudier les structures spatiales ?
+
+L’analyse des structures spatiales peut être considérée tout d’abord comme un outil statistique élémentaire. 
+Quand on observe une carte sur laquelle sont placés des objets, ils ne semblent en général pas répartis au hasard. 
+On peut voir des variations de densité, sous la forme de gradients ou d’agrégats. 
+Pour décrire un phénomène quantitatif à partir d’un certain nombre d’observations, disons le diamètre moyen des arbres d’un peuplement, on utilise classiquement l’outil fourni par la théorie des variables aléatoires : on mesure un certain nombre d’arbres, on considère que leur diamètre moyen est un estimateur de l’espérance de la variable aléatoire qu’est le diamètre de chaque arbre, et on calcule la variance de l’échantillon pour avoir une idée de la variabilité des diamètres. 
+Si on s’intéresse maintenant à la répartition spatiale de ces arbres, la quantité d’information disponible est bien plus importante : la densité des arbres, leur diamètre moyen selon le lieu et les interactions éventuelles des arbres entre eux. 
+Les outils mathématiques nécessaires sont les processus ponctuels, généralisation spatialisée (généralement à deux dimensions) des variables aléatoires.
+
+La question fondamentale consiste à caractériser clairement ce qu’on observe. 
+Prenons l’exemple d’un peuplement forestier dans lequel les arbres d’une espèce sont apparemment regroupés et forment des agrégats. 
+Deux causes peuvent en être responsables : l’hétérogénéité du milieu favorise la présence de cette espèce localement, la densité des arbres est alors variable, ou bien les arbres sont regroupés par des processus d’agrégation (par exemple une faible dispersion des graines) indépendamment du milieu qu’on supposera dans ce cas homogène. 
+Les mécanismes écologiques sont extrêmement différents dans les deux cas. 
+Mais la distinction entre hétérogénéité et agrégation est formellement impossible sur un jeu de données unique : des hypothèses de travail sont indispensables.
+Cette difficulté est probablement la raison pour laquelle de nombreuses méthodes statistiques ont été mises en place pour détecter les structures spatiales. 
+Une revue complète en sera faite (chapitre TODO), la famille d’outils la plus efficace sera étudiée en détail (chapitre TODO) ainsi que ses fondements mathématiques (les processus ponctuels, chapitre \ref{Processus}) et de nouveaux outils seront proposés pour repousser les limites actuelles.
+La relation directe entre les processus ponctuels et les phénomènes écologiques sous-jacents est difficile, à cause de la simplification excessive mais surtout parce que la réalisation d’un processus observée sous la forme d’un semis de points est instantanée et unique alors qu’un peuplement forestier est le résultat d’une histoire et de processus successifs. 
+
+La théorie des processus ponctuels est indispensable pour comprendre les méthodes présentées ici. 
+Une présentation en est faite dans premier chapitre.
+Le deuxième chapitre présente l’état de l’art en termes d’analyse spatiale des processus ponctuels suivi de l’introduction de nouveaux outils permettant d’étendre son champ d’application. 
+L’objectif est de permettre la caractérisation des structures spatiales dans un cadre théorique aussi vaste que possible et répondant aux exigences des données réelles, comme la prise en compte de l’hétérogénéité. 
+
+
+
+<!-- La commande \mainmatter marque le début du corps du document LaTeX--> 
+<!-- Elle ne doit pas être supprimée-->
+\mainmatter
+ 
