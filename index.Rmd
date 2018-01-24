@@ -1,6 +1,6 @@
 --- 
 title: "Statistiques Spatiales"
-author: "Eric Marcon"
+author: "Eric Marcon et Stéphane Traissac"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 description: "Modèle de livre écrit avec bookdown."
