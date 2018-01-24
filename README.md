@@ -1,5 +1,5 @@
-# BookTemplate
+# StatSpat
 
 ![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
-Customized Bookdown Template
+[Support de cours sur les statistiques spatiales](https://ericmarcon.github.io/StatSpat/)
