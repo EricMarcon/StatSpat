@@ -29,27 +29,31 @@ Nous nous intéresserons à des ensembles dénombrables de points (on dira aussi
 Les points seront notés en minuscules, les ensembles en majuscules : $X \subset R^2$ , $x \in X$.
 Le semis de point $X$ sera généralement défini sur tout le plan, et son nombre de points sera infini. 
 À l’intérieur de l’aire d’étude $A$, un sous ensemble de $X$ noté $X_A$ sera observé et cartographié : $X_A = X \cap A$.
+
 Nous ne nous intéresserons qu’à des ensembles de points localement finis, c’est-à-dire tels que leur nombre de points dans $A$ soit fini : $n(A) < \infty$ pour $A$ borné. 
 Cette restriction n’a pas de conséquences pratiques.
+
 Il est impossible de définir directement une fonction qui attribuerait à chaque semis la probabilité de le tirer, parce que la probabilité de chaque semis est nulle. 
 On passe donc par des ensembles de semis de points, dont la probabilité n’est pas nulle. L’ensemble des semis de points localement finis est noté $N_f$.
 $N_f$ peut être équipé d’une $\sigma$-algèbre $\mathcal{N_f}$.
 Les éléments $F$ de $\mathcal{N_f}$ sont des ensembles de semis de points localement finis. 
 $\mathcal{N_f}$ est une tribu (ou $\sigma$-algèbre) de $N_f$ :
-\begin{itemize}
-  \item l'ensemble vide appartient à $\mathcal{N_f}$;
-  \item pour tout $F \in \mathcal{N_f}$, le complémentaire de $F$ dans $\mathcal{N_f}$ appartient aussi à $\mathcal{N_f}$;
-  \item L’union de $(F_1, F_2, F_3,…)$, une suite dénombrable d'éléments de $\mathcal{N_f}$ appartient aussi à $\mathcal{N_f}$.
-\end{itemize}
+
+- l'ensemble vide appartient à $\mathcal{N_f}$;
+
+- pour tout $F \in \mathcal{N_f}$, le complémentaire de $F$ dans $\mathcal{N_f}$ appartient aussi à $\mathcal{N_f}$;
+
+- l’union de $(F_1, F_2, F_3,…)$, une suite dénombrable d'éléments de $\mathcal{N_f}$ appartient aussi à $\mathcal{N_f}$.
+
 
 $(N_f, \mathcal{N_f})$ est un espace probabilisable. 
 Il reste à le doter d’une mesure $P$, la probabilité de tirer un ensemble de semis de points particulier $F$. 
 Cet ensemble est défini par le nombre de points tirés, $N(A)$, pour tout $A$ borné.
 $P$ est une mesure car :
-\begin{itemize}
-  \item $P(\emptyset)=0$
-  \item P est $\sigma$-additive : $P(\bigcup_{i=1}^n F_i) = \sum_{i=1}^n {P(F_i)}$, où $\bigcup_(i=1)^n F_i$ est une union disjointe.
-\end{itemize}
+
+- $P(\emptyset)=0$
+  
+- $P$ est $\sigma$-additive : $P(\bigcup_{i=1}^n F_i) = \sum_{i=1}^n {P(F_i)}$, où $\bigcup_(i=1)^n F_i$ est une union disjointe.
 
 $P$ est une probabilité car on fixe $P(\mathcal{N_f})=1$.
 
@@ -65,6 +69,7 @@ Enfin, la surface de A sera notée $\|A\|$.
 
 Soit $S$ une partie de $A$. 
 La propriété de premier ordre $\mu(S)$, appelée également mesure d’intensité du processus $\Xi$, est l’espérance du nombre de points dans $S$ :
+
 \begin{equation}
   \mu(S)=\mathop{\mathbb{E}}(N(S))
   (\#eq:muSE)

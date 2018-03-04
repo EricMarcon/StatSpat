@@ -176,7 +176,7 @@
 \author{Eric Marcon et Stéphane Traissac}
 
 
-\date{2018-01-23}
+\date{2018-03-04}
 
 
 % Main title page with filigrane
@@ -377,24 +377,32 @@ ensembles en majuscules : \(X \subset R^2\) , \(x \in X\). Le semis de
 point \(X\) sera généralement défini sur tout le plan, et son nombre de
 points sera infini. À l'intérieur de l'aire d'étude \(A\), un sous
 ensemble de \(X\) noté \(X_A\) sera observé et cartographié :
-\(X_A = X \cap A\). Nous ne nous intéresserons qu'à des ensembles de
-points localement finis, c'est-à-dire tels que leur nombre de points
-dans \(A\) soit fini : \(n(A) < \infty\) pour \(A\) borné. Cette
-restriction n'a pas de conséquences pratiques. Il est impossible de
-définir directement une fonction qui attribuerait à chaque semis la
-probabilité de le tirer, parce que la probabilité de chaque semis est
-nulle. On passe donc par des ensembles de semis de points, dont la
-probabilité n'est pas nulle. L'ensemble des semis de points localement
-finis est noté \(N_f\). \(N_f\) peut être équipé d'une
+\(X_A = X \cap A\).
+
+Nous ne nous intéresserons qu'à des ensembles de points localement
+finis, c'est-à-dire tels que leur nombre de points dans \(A\) soit fini
+: \(n(A) < \infty\) pour \(A\) borné. Cette restriction n'a pas de
+conséquences pratiques.
+
+Il est impossible de définir directement une fonction qui attribuerait à
+chaque semis la probabilité de le tirer, parce que la probabilité de
+chaque semis est nulle. On passe donc par des ensembles de semis de
+points, dont la probabilité n'est pas nulle. L'ensemble des semis de
+points localement finis est noté \(N_f\). \(N_f\) peut être équipé d'une
 \(\sigma\)-algèbre \(\mathcal{N_f}\). Les éléments \(F\) de
 \(\mathcal{N_f}\) sont des ensembles de semis de points localement
 finis. \(\mathcal{N_f}\) est une tribu (ou \(\sigma\)-algèbre) de
 \(N_f\) :
 
 \begin{itemize}
-  \item l'ensemble vide appartient à $\mathcal{N_f}$;
-  \item pour tout $F \in \mathcal{N_f}$, le complémentaire de $F$ dans $\mathcal{N_f}$ appartient aussi à $\mathcal{N_f}$;
-  \item L’union de $(F_1, F_2, F_3,…)$, une suite dénombrable d'éléments de $\mathcal{N_f}$ appartient aussi à $\mathcal{N_f}$.
+\item
+  l'ensemble vide appartient à \(\mathcal{N_f}\);
+\item
+  pour tout \(F \in \mathcal{N_f}\), le complémentaire de \(F\) dans
+  \(\mathcal{N_f}\) appartient aussi à \(\mathcal{N_f}\);
+\item
+  l'union de \((F_1, F_2, F_3,…)\), une suite dénombrable d'éléments de
+  \(\mathcal{N_f}\) appartient aussi à \(\mathcal{N_f}\).
 \end{itemize}
 
 \((N_f, \mathcal{N_f})\) est un espace probabilisable. Il reste à le
@@ -404,8 +412,12 @@ points tirés, \(N(A)\), pour tout \(A\) borné. \(P\) est une mesure car
 :
 
 \begin{itemize}
-  \item $P(\emptyset)=0$
-  \item P est $\sigma$-additive : $P(\bigcup_{i=1}^n F_i) = \sum_{i=1}^n {P(F_i)}$, où $\bigcup_(i=1)^n F_i$ est une union disjointe.
+\item
+  \(P(\emptyset)=0\)
+\item
+  \(P\) est \(\sigma\)-additive :
+  \(P(\bigcup_{i=1}^n F_i) = \sum_{i=1}^n {P(F_i)}\), où
+  \(\bigcup_(i=1)^n F_i\) est une union disjointe.
 \end{itemize}
 
 \(P\) est une probabilité car on fixe \(P(\mathcal{N_f})=1\).
