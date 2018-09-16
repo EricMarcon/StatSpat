@@ -2,7 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode=true}{hyperref} 
+\PassOptionsToPackage{unicode=true}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
   \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 
@@ -15,14 +15,12 @@
   ]{memoir}
 
 % Font family: lmodern by default
-\usepackage{fontspec}
   \usepackage{lmodern}
 
 % Double (or whatever) spacing
 
 \usepackage{amssymb, amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 
 % mathspec: arbitrary math fonts
   \usepackage{unicode-math}
@@ -33,7 +31,7 @@
 % Specific sanserif font
 % Specific monotype font
 % Specific math font
-% Chinese, Japanese, Corean fonts 
+% Chinese, Japanese, Corean fonts
 
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -44,7 +42,6 @@
 }{}
 
 % Verbatim in note
-  \usepackage{fancyvrb}
 
 \usepackage{xcolor}
 
@@ -58,11 +55,10 @@
             citecolor=Blue,
             urlcolor=Blue,
             breaklinks=true}
-            
-% Don't use monospace font for urls
-\urlstyle{same}  
 
-  \VerbatimFootnotes % allows verbatim text in footnotes
+% Don't use monospace font for urls
+\urlstyle{same}
+
 
 % Geometry package
 
@@ -111,7 +107,7 @@
 \newcommand{\NormalTok}[1]{#1}
 
 % Tables
-  \usepackage{longtable,booktabs}
+  \usepackage{longtable,booktabs,tabu}
   % Fix footnotes in tables (requires footnote package)
   \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
 
@@ -159,7 +155,7 @@
 
 
 
-\usepackage[style=authoryear-ibid,backend=bibtex,citestyle=verbose-inote,pageref=true,isbn=false,backref=true,giveninits=true,uniquename=init,maxcitenames=2,maxbibnames=150,sorting=nyt,sortcites=false]{biblatex}
+\usepackage[style=authoryear-ibid,backend=biber,citestyle=verbose-inote,pageref=true,isbn=false,backref=true,giveninits=true,uniquename=init,maxcitenames=2,maxbibnames=150,sorting=nyt,sortcites=false]{biblatex}
 \addbibresource{../Library.bib}
 \addbibresource{packages.bib}
 
@@ -176,34 +172,35 @@
 \author{Eric Marcon et Stéphane Traissac}
 
 
-\date{2018-03-04}
+\date{2018-09-16}
 
 
 % Main title page with filigrane
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newcommand{\MainTitlePage}[1][]{
 	\SmallMargins % Margins
 	\pagestyle{empty} % No header/footer
 	~\\ % Print a character or the page will not exist
 	\begin{textblock}{2}(30,10)
 		\rule{1pt}{\paperheight-20mm}
-	\end{textblock} 
+	\end{textblock}
 	\begin{textblock}{140}(50, 45)
-		\flushright 
+		\flushright
 		\begin{Spacing}{3}
-			{\fontsize{45}{45}\selectfont \thetitle\par}
+			{\fontfamily{qtm}\selectfont\fontsize{45}{45}\selectfont \textsc{\thetitle}}
 		\end{Spacing}
 	\end{textblock}
 	\begin{textblock}{140}(50, 125)
-		\flushright 
+		\flushright
 		{\fontfamily{qtm}\Large \theauthor}
-	\end{textblock} 
+	\end{textblock}
 	\begin{textblock}{120}[1, 1](225, 297)
 		\includegraphics[width=10cm]{Filigrane}
-	 \end{textblock} 
+	 \end{textblock}
 	\begin{textblock}{140}[0, 1](50, 262)
 		\normalfont	Version: \thedate
-	\end{textblock} 
+	\end{textblock}
 	\newpage
 	~\\ % Print a character or the page will not exist
 	\begin{textblock}{140}(40, 40)
@@ -215,7 +212,7 @@
 		UMR \'Ecologie des forêts de Guyane\\
 		\url{http://www.ecofog.gf}\\[3\baselineskip]
 		Les opinions émises par les auteurs sont personnelles et n’engagent ni l’UMR EcoFoG ni ses tutelles.
-    
+
     \tiny{Photographie en couverture: Hadrien Lalagüe}
 	\end{textblock}
 	\newpage
@@ -223,6 +220,7 @@
 
 % PhD / HDR Thesis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 % End of preamble

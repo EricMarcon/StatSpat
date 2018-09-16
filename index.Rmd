@@ -3,7 +3,7 @@ title: "Statistiques Spatiales"
 author: "Eric Marcon et Stéphane Traissac"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-description: "Modèle de livre écrit avec bookdown."
+description: "Support de cours."
 maintitlepage:
   epigraph: |
     Ce document est réalisé de façon dynamique et reproductible grâce à:
@@ -20,7 +20,6 @@ classoption:
   - openright
 papersize: A4
 fontsize: 11pt
-verbatim-in-note: yes
 toc-depth: 3
 lang: fr
 otherlangs: [en-US, en-GB, fr]
@@ -28,7 +27,7 @@ bibliography: [../Library.bib, packages.bib]
 biblio-style: authoryear-ibid
 cite-style: verbose-inote
 biblatexoptions:
-  - backend=bibtex
+  - backend=biber
   - citestyle=verbose-inote
   - pageref=true
   - isbn=false
@@ -76,7 +75,7 @@ Library <- function(Packages) {
   invisible(sapply(Packages, InstallAndLoad))
 }
 # Add necessary packages here
-Packages <- c("bookdown", "knitr", "rmarkdown", "spatstat")
+Packages <- c("bookdown", "kableExtra", "knitr", "rmarkdown", "spatstat")
 
 # Install them and create packages.bib file to reference them as @R-package
 Library(Packages)
